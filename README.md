@@ -2,7 +2,7 @@
 ### 8995E — 2025–2026 VEX Robotics Season (PUSH BACK)
 
 <p align="center">
-  <img src="./images/IMG_0377.jpeg" width="600">
+  <img src="./media/IMG_0377.jpeg" width="600">
 </p>
 
 This repository contains all programming projects developed by **Team 8995E** during the **2025–2026 VEX Robotics Push Back season**.
@@ -61,7 +61,7 @@ Includes:
 ## 🎥 Autonomous Demo Runs
 
 <p align="center">
-  <img src="./images/IMG_0447.jpg" width="500">
+  <img src="./media/IMG_0447.jpg" width="500">
 </p>
 
 > Videos are hosted externally and linked here for easy viewing.
