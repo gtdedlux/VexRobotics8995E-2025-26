@@ -16,7 +16,7 @@ This repository is organized as a **monorepo**, containing separate projects for
 
 ---
 
-## 🤖 Project Breakdown
+##  Project Breakdown
 
 ###  Skills Autonomous 
 The **Skills** project is built using **LemLib** with dead-wheel odometry.
@@ -27,7 +27,7 @@ The **Skills** project is built using **LemLib** with dead-wheel odometry.
 - Long-route autonomous optimized for consistency
 - Designed for repeatability under competition conditions
 
-📁 Location: `skills/`
+📁 Location: `autons.cpp`
 
 ---
 
@@ -40,7 +40,7 @@ The **Match Auton** project contains autonomous routines tailored for different 
 - Shared chassis and control logic with Skills
 - Tuned for reliability rather than maximum risk
 
-📁 Location: `match-auton/`
+📁 Location: `autons.cpp`
 
 ---
 
@@ -52,7 +52,6 @@ Includes:
 - PID and motion utilities
 - Sensor wrappers and helper functions
 
-📁 Location: `shared/`
 
 ---
 
@@ -62,13 +61,13 @@ Includes:
 
 ###  Autonomous Skills Runs
 *(Links will be added as the season progresses)*
-- 🎥 Skills Run #1 — TBD
-- 🎥 Skills Run #2 — TBD
+-  Skills Run #1 — TBD
+-  Skills Run #2 — TBD
 
 ### Match Autonomous Runs
 *(Links will be added as routines are finalized)*
-- 🎥 Match Auton (Left) — TBD
-- 🎥 Match Auton (Right) — TBD
+-  Match Auton (Left) — TBD
+-  Match Auton (Right) — TBD
 
 ---
 
