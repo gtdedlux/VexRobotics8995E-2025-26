@@ -52,6 +52,7 @@ Includes:
 - PID and motion utilities
 - Sensor wrappers and helper functions
 
+📁 Location: `main.cpp`
 
 ---
 
