@@ -68,7 +68,7 @@ Includes:
 
 ###  Autonomous Skills Runs
 *(Links will be added as the season progresses)*
--  Skills Run #1 — TBD  
+- [Skills Run #1 Early Run](https://youtube.com/shorts/S56K8_ltfkg)
 -  Skills Run #2 — TBD  
 
 ### Match Autonomous Runs
