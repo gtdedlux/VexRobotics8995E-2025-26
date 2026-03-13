@@ -223,7 +223,7 @@ void skillsAuto(){
     chassis.setPose(x,109-(distanceL.get_distance())/25.4, 90); 
 
         chassis.moveToPoint(-38, 88, 5000, {.forwards = false, .minSpeed=72, .earlyExitRange=6});
-        chassis.moveToPoint(-45, 91, 5000, {.forwards = false, .maxSpeed = 55});
+        chassis.moveToPoint(-45, 88, 5000, {.forwards = false, .maxSpeed = 55});
 
         wing.retract();
 
@@ -238,11 +238,15 @@ void skillsAuto(){
     chassis.turnToHeading ( 0, 5000);
 
 
+
+
     //distance sensor reset  
     pros::lcd::print(7, "X: %f", 72-((distanceL.get_distance())/25.4));
    pros::delay(1000); //NEED THIS DELAY TO LET POS UPDATE BEFORE TURNING
     chassis.setPose(-(72-(distanceL.get_distance())/25.4),86.5, 0); //CHECK ALL VALUES 
 
+    chassis.moveToPoint(-45, 91.5, 5000, {.maxSpeed = 80});
+    chassis.waitUntilDone();
     loadBalls();
 
 
@@ -308,8 +312,8 @@ void skillsAuto(){
      chassis.moveToPoint(-39, -21,  2000, {.maxSpeed = 80});
 //     //chassis.swingToHeading( 90,lemlib::DriveSide::LEFT, 500, {.minSpeed = 127, .earlyExitRange = 10});
    chassis.turnToHeading (90, 1000);
-     chassis.moveToPoint(-43, -21,  5000, {.forwards = false});
-    chassis.moveToPoint(-10, -22.5, 5000, {.minSpeed = 100, .earlyExitRange = 5});
+     chassis.moveToPoint(-43, -22.5,  5000, {.forwards = false});
+    chassis.moveToPoint(-10, -24, 5000, {.minSpeed = 100, .earlyExitRange = 5});
      pros::delay(500); 
     //toungue.extend();
 
