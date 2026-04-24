@@ -20,6 +20,15 @@ void setIntakeM(int speed) {
     pros::delay(10);
 }
 
+void jam(int speed) {
+    intake2Speed=-120;
+    intake1Speed=-120;
+    pros::delay(70);
+
+    intake2Speed=120;
+    intake1Speed=120;
+    pros::delay(10);
+}
 
 double avgImuHeading(double h1, double h2) {
     // convert degrees → unit circle

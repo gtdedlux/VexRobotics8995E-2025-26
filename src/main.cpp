@@ -238,7 +238,14 @@ void competition_initialize() {
  * from where it left off.
  */
 void autonomous() {
-    skillsAuto();
+
+    rightSideAuto();
+    //rightSideAuto();
+
+    // chassis.setPose(0,0,0);
+
+    // chassis.moveToPoint(0,5, 5000);
+    // pros::delay(1000);
 
 }
 
@@ -296,11 +303,15 @@ void opcontrol() {
 		if (master.get_digital_new_press(DIGITAL_UP)) {
 		toungue.toggle();
 		}
+
+        if (master.get_digital_new_press(DIGITAL_B)) {
+		dec.toggle();
+		}
 		// if (master.get_digital_new_press(DIGITAL_DOWN)) {
 		// toungue.extend();
 		// }
 
-        if (master.get_digital_new_press(DIGITAL_B)) {
+        if (master.get_digital_new_press(DIGITAL_A)) {
 		wing.toggle();
 		}
 		// if (master.get_digital_new_press(DIGITAL_A)) {

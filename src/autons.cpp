@@ -12,7 +12,7 @@ void rightSideAuto(){
     chassis.moveToPoint(12, 35, 5000,{ .maxSpeed = 50});
     pros::delay(1000);
     chassis.turnToHeading(160,1500);
-    chassis.moveToPoint(34, 3, 5000,{ .maxSpeed = 60} );
+    chassis.moveToPoint(36, 3, 5000,{ .maxSpeed = 60} );
     pros::delay(200);
     chassis.turnToHeading(180,300);
 
@@ -20,30 +20,35 @@ void rightSideAuto(){
      //distance sensor reset  
     pros::lcd::print(7, "X: %f", 72-((distanceL.get_distance())/25.4));
    pros::delay(700); //NEED THIS DELAY TO LET POS UPDATE BEFORE TURNING
+    int x = 72-(distanceL.get_distance())/25.4;
     chassis.setPose((72-(distanceL.get_distance())/25.4),3, 180); 
 
     pros::delay(500);
-    chassis.moveToPoint(53.5, 25, 1200,{ .forwards = false, .maxSpeed = 80,});
-    pros::delay(200);
+    chassis.moveToPoint(56, 25, 3000,{ .forwards = false, .maxSpeed = 70});
+    pros::delay(500);
     intake2Speed = 115;
-     pros::delay(350);
+    wing.extend();
+     pros::delay(500);
     toungue.extend();
     
-     chassis.moveToPoint(53.5, -12, 1000, {.maxSpeed = 80});  
+     chassis.moveToPoint(55, -12, 1000, {.maxSpeed = 60});  
     intake2Speed = 0;
-    chassis.moveToPoint(53.5, -6, 1000, {.forwards = false, .maxSpeed = 60});  
-    chassis.moveToPoint(53.5, -14, 1000, {.maxSpeed = 80});  
-    pros::delay(300);
-
-    chassis.moveToPoint(53.5, 25, 2000,{ .forwards = false, .maxSpeed = 80,});
-    pros::delay(450);
-    intake2Speed = 115;
-    pros::delay(3000);
-    // _________________
-
-
     pros::delay(500);
+    wing.retract();
 
+    chassis.moveToPose(55, -6, 180, 1000, { .maxSpeed = 40});  
+    chassis.moveToPoint(x+1.5, -15, 650, {.maxSpeed = 40});  
+    pros::delay(100);
+
+    chassis.moveToPoint(x+1.5, 20, 5000, {.forwards = false, .maxSpeed = 60});  
+
+    chassis.moveToPose(56, 27,180, 10000,{ .forwards = false, .maxSpeed = 60,});
+    //chassis.waitUntilDone();
+    pros::delay(800);
+    intake2Speed = 115;
+    wing.extend();
+    pros::delay(1500);
+    // _________________
 
 }
 
@@ -126,6 +131,8 @@ void skillsAuto(){
 
     pros::delay(500);
     toungue.extend();
+    dec.extend();
+    
   
     pros::delay(100); 
     chassis.turnToHeading ( -180, 5000);
@@ -170,7 +177,9 @@ void skillsAuto(){
     wing.extend();
     intake1Speed = 120;
     intake2Speed = 120;  
-    pros::delay(2500); // wait for a moment to shoot
+    jam(120);
+
+    pros::delay(2300); // wait for a moment to shoot
 
     
     //second loader
@@ -194,7 +203,15 @@ void skillsAuto(){
     wing.extend();
     intake1Speed = 120;
     intake2Speed = 120;  
-    pros::delay(2500); // wait for a moment to shoot
+    pros::delay(50); // wait for a moment to shoot
+    intake2Speed = -120;  
+    intake1Speed = -120;
+   pros::delay(100); //jam
+    intake2Speed = 120;  
+    intake1Speed = 120;
+
+    
+    pros::delay(2200); // wait for a moment to shoot
 
  
     

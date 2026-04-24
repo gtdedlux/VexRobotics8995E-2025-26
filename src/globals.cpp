@@ -13,6 +13,10 @@ pros::Motor intakeT(19,pros::v5::MotorGears::green);
 pros::adi::Pneumatics toungue('H', false);
 pros::adi::Pneumatics wing('E', false);
 
+pros::adi::Pneumatics dec('A', false);
+
+
+
 
 //sensors
 pros::Imu imu(15); //main imu sensor  MAKE SURE TO CHECK PORTS OF BOTH IMUS

@@ -10,6 +10,8 @@ extern pros::Motor intake1;
 // //pnematics
  extern pros::adi::Pneumatics toungue;
  extern pros::adi::Pneumatics wing;
+ extern pros::adi::Pneumatics dec;
+
 
  //sensors
 extern pros::Imu imu;
